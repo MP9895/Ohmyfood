@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+
+.mainheader {
+        padding: 1rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+
+    &__logo img {
+    width: 60%;
+    text-align:center;
+    margin:auto;
+    display:flex;
+}
+}
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    background-color: rgb(243, 243, 243);
+    font-size: 1.2rem;
+    position: relative;
+  
+    &__block {
+        display: inherit;
+    }
+
+    &__icon {
+      margin-right: 1rem;
+    }
+  
+    &__text {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+
+.accroche {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(250, 250, 250, 0.6);
+  
+    &__titre {
+      margin: 0;
+    }
+  
+    &__text {
+      font-weight: 300;
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+    }
+
+    &__btn {
+        border-radius: 50px;
+        padding: 15px 20px;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(255,121,218,1) 100%);
+        box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.5);
+        color: #fff;
+        border: none;
+    }
+}
+}
