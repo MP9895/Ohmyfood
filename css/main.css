@@ -142,7 +142,7 @@ h3 {
     display: flex;
     justify-content: center;
     padding: 1.25rem;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(230, 230, 230);
     font-size: 1.2rem;
     position: relative;
   }
@@ -160,7 +160,7 @@ h3 {
   .accroche {
     padding: 2rem;
     text-align: center;
-    background-color: rgba(250, 250, 250, 0.6);
+    background-color: rgba(230, 230, 230, 0.5);
   }
   .accroche__titre {
     margin: 0;
@@ -171,12 +171,116 @@ h3 {
     margin: 1.5rem 0;
   }
   .accroche__btn {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
     border-radius: 50px;
-    padding: 15px 20px;
+    padding: 20px;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgb(255, 121, 218) 100%);
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 2px 2px 10px #c4c3c0;
     color: #fff;
     border: none;
+  }
+  .fonctionnement {
+    background-color: #fff;
+    padding: 35px 20px 45px 20px;
+    margin-bottom: 20px;
+  }
+  .fonctionnement__titre {
+    margin-bottom: 30px;
+  }
+  .fonctionnement__step {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #c4c3c0;
+    padding: 0 70px 0 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .fonctionnement__step:hover {
+    background-color: #f2eafb;
+  }
+  .fonctionnement__step span {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .fonctionnement__icon {
+    font-size: 18px;
+    height: 19px;
+    margin-right: 15px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .fonctionnement__step--number {
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background-color: #9356DC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -20px;
+    color: white;
+  }
+  .restaurants {
+    padding: 55px 20px 45px 20px;
+    background-color: #f6f6f6;
+  }
+  .restaurants__titre {
+    margin-bottom: 30px;
+  }
+  .restaurants__cartes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .restaurants__carte {
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+  }
+  .restaurants__carte--img {
+    height: 13rem;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .restaurants__info--nom {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    margin-top: 5px;
+  }
+  .footer {
+    background-color: #353535;
+    padding: 25px;
+  }
+  .footer__logo {
+    font-size: 24px;
+    font-family: "Shrikhand", sans-serif;
+    color: white;
+    margin-bottom: 15px;
+  }
+  .footer__link {
+    color: white;
+  }
+  .footer__icon {
+    margin-right: 10px;
+  }
+  .footer__element {
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=main.css.map */
