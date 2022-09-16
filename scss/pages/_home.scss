@@ -2,15 +2,11 @@
     padding: 2rem;
     text-align: center;
     background-color: rgba(230, 230, 230,0.5);
-  
-    &__titre {
-      margin: 0;
-    }
-  
+   
     &__text {
-      font-weight: 300;
-      font-size: 1.2rem;
-      margin: 1.5rem 0;
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
     }
 
     &__btn {
@@ -29,7 +25,7 @@
 
 .fonctionnement {
     background-color: #fff;
-    padding: 35px 20px 45px 20px;
+    padding: 45px 20px;
     margin-bottom: 20px;
     &__titre {
         margin-bottom: 30px;
@@ -77,7 +73,7 @@
 }
 
 .restaurants{
-        padding:  55px 20px 45px 20px;
+        padding: 55px 20px 45px 20px;
         background-color: #f6f6f6;
     &__titre {
         margin-bottom: 30px;
@@ -92,26 +88,21 @@
 
     &__carte {
         background-color: white;
-        border-radius: 1rem;
-        position: relative;
-        text-decoration: none;
-        color: inherit;
-        display: block;
+        border-radius: 16px;
         box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
-        transition: .2s;
     &--img {
         height: 13rem;
         width: 100%;
-        border: transparent solid 0px;
-        border-radius: 1rem 1rem 0 0;
+        border: none;
+        border-radius: 16px 16px 0 0;
         box-shadow: none;
         object-fit: cover;
     }
 }
 
     &__info--nom {
-    margin-bottom: 10px;
-    padding-left: 5px;
-    margin-top: 5px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        margin-top: 10px;
 }    
 }

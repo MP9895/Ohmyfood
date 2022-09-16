@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -38,13 +39,11 @@ a {
 
 .mainheader {
   padding: 1rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 }
 .mainheader__logo img {
-  width: 60%;
-  text-align: center;
-  margin: auto;
+  width: 40%;
   display: flex;
+  margin: auto;
 }
 
 .localisation {
@@ -52,19 +51,17 @@ a {
   justify-content: center;
   padding: 1.25rem;
   background-color: rgb(230, 230, 230);
-  font-size: 1.2rem;
-  position: relative;
 }
 .localisation__block {
   display: inherit;
 }
 .localisation__icon {
-  margin-right: 1rem;
+  margin-right: 1.25rem;
+  margin-top: 0.1rem;
 }
 .localisation__text {
   font-weight: 700;
   font-size: 1.2rem;
-  margin: 0;
 }
 
 .loading {
@@ -183,9 +180,6 @@ a {
   text-align: center;
   background-color: rgba(230, 230, 230, 0.5);
 }
-.accroche__titre {
-  margin: 0;
-}
 .accroche__text {
   font-weight: 300;
   font-size: 1.2rem;
@@ -206,7 +200,7 @@ a {
 
 .fonctionnement {
   background-color: #fff;
-  padding: 35px 20px 45px 20px;
+  padding: 45px 20px;
   margin-bottom: 20px;
 }
 .fonctionnement__titre {
@@ -265,25 +259,20 @@ a {
 }
 .restaurants__carte {
   background-color: white;
-  border-radius: 1rem;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  display: block;
+  border-radius: 16px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.2s;
 }
 .restaurants__carte--img {
   height: 13rem;
   width: 100%;
-  border: transparent solid 0px;
-  border-radius: 1rem 1rem 0 0;
+  border: none;
+  border-radius: 16px 16px 0 0;
   box-shadow: none;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .restaurants__info--nom {
   margin-bottom: 10px;
-  padding-left: 5px;
-  margin-top: 5px;
+  padding-left: 10px;
+  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */
