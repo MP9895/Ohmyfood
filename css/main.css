@@ -272,7 +272,7 @@ a {
      object-fit: cover;
 }
 .restaurants__info--nom {
-  margin-bottom: 10px;
   padding-left: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
+  padding-bottom: 8px;
 }/*# sourceMappingURL=main.css.map */
