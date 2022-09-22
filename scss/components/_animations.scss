@@ -1,0 +1,64 @@
+.badge_nouveau{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 80px;
+    background-color: $color-tertiary;
+    color: #008766;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.heart{
+    font-size: 20px;
+    color: grey;
+    &:hover{
+        animation: fill 1s ease-out;
+        color: #9356DC;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.btn{
+    cursor: pointer;
+    display: block;
+    border: none;
+    margin: auto;
+    @include gradient-color;  
+    color: white;
+    border-radius: 50px;
+    @include shadow;
+    padding: 15px 20px;
+    font-weight: bold;
+    transition: transform 500ms;
+    opacity: 1;
+    &:hover{
+        opacity: 0.8;
+        @include darker-shadow;
+    }
+}
+
+// Remplissage du coeur
+@keyframes fill{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+// Animation underline -> entrées, plats, desserts
+@keyframes progress{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
