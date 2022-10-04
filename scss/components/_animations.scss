@@ -1,3 +1,33 @@
+/* KEYFRAMES LOADER */
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+
+//  Animation de disparition du loader
+@keyframes loader{
+    0%{
+        background-color: rgba(0,0,0,1);
+    }
+    25%{
+        background-color:rgba(0,0,0,1);
+    }
+    50%{
+        background-color:rgba(0,0,0,1);
+    }
+    80%{
+        background-color:rgba(0,0,0,1);
+    }
+    100%{
+        background-color:rgba(0,0,0,0.8);
+        visibility: hidden;
+    }
+}
+
 .badge_nouveau{
     display: inline-block;
     display: flex;
@@ -15,11 +45,16 @@
 .heart{
     font-size: 20px;
     color: grey;
+    transform: scale(1);
     &:hover{
         animation: fill 1s ease-out;
-        color: #9356DC;
+        background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+        background-clip: text;
+        -webkit-text-fill-color:transparent;
         font-weight: bold;
         cursor: pointer;
+        transform: scale(1.4);
+        animation-duration: 2s;
     }
 }
 
@@ -34,10 +69,10 @@
     @include shadow;
     padding: 15px 20px;
     font-weight: bold;
-    transition: transform 500ms;
+    transition: transform 2s;
     opacity: 1;
     &:hover{
-        opacity: 0.8;
+        opacity: 0.7;
         @include darker-shadow;
     }
 }
@@ -61,4 +96,12 @@
     100%{
         transform: scaleX(1);
     }
+}
+
+// Animation plats cochés
+.icone_check {
+    color: white;
+    font-size: 25px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
 }

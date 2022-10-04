@@ -43,6 +43,59 @@ a {
   color: black;
 }
 
+/* KEYFRAMES LOADER */
+@-webkit-keyframes spin3D {
+  from {
+    transform: rotate3d(0.5, 0.5, 0.5, 360deg);
+  }
+  to {
+    transform: rotate3d(0deg);
+  }
+}
+@keyframes spin3D {
+  from {
+    transform: rotate3d(0.5, 0.5, 0.5, 360deg);
+  }
+  to {
+    transform: rotate3d(0deg);
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    background-color: rgb(0, 0, 0);
+  }
+  25% {
+    background-color: rgb(0, 0, 0);
+  }
+  50% {
+    background-color: rgb(0, 0, 0);
+  }
+  80% {
+    background-color: rgb(0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+  }
+}
+@keyframes loader {
+  0% {
+    background-color: rgb(0, 0, 0);
+  }
+  25% {
+    background-color: rgb(0, 0, 0);
+  }
+  50% {
+    background-color: rgb(0, 0, 0);
+  }
+  80% {
+    background-color: rgb(0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+  }
+}
 .badge_nouveau {
   display: inline-block;
   display: flex;
@@ -60,13 +113,20 @@ a {
 .heart {
   font-size: 20px;
   color: grey;
+  transform: scale(1);
 }
 .heart:hover {
   -webkit-animation: fill 1s ease-out;
           animation: fill 1s ease-out;
-  color: #9356DC;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
   cursor: pointer;
+  transform: scale(1.4);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .btn {
@@ -80,11 +140,11 @@ a {
   box-shadow: 2px 2px 10px #c4c3c0;
   padding: 15px 20px;
   font-weight: bold;
-  transition: transform 500ms;
+  transition: transform 2s;
   opacity: 1;
 }
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 2px 2px 20px black;
 }
 
@@ -121,6 +181,13 @@ a {
     transform: scaleX(1);
   }
 }
+.icone_check {
+  color: white;
+  font-size: 25px;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
 .mainheader {
   padding: 1rem;
 }
@@ -148,97 +215,91 @@ a {
   font-size: 1.2rem;
 }
 
-.loading {
-  position: relative;
-  width: 4rem;
-  height: 4rem;
-  transform-style: preserve-3d;
-  perspective: 800px;
+@media (min-width: 1224px) {
+  .mainheader {
+    padding: 2rem;
+  }
+  .mainheader__logo img {
+    width: 15%;
+    display: flex;
+    margin: auto;
+  }
+  .localisation {
+    padding: 2rem;
+  }
+  .localisation__icon {
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+    margin-top: 0.1rem;
+  }
+  .localisation__text {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
 }
-.loading .arc {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
+.loader {
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #c4c3c0;
+  position: fixed;
+  z-index: 1;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: loader 4s;
+          animation: loader 4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.loader .spinner-box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .leo-border-1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  border-bottom: 3px solid var(--primary-color);
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.1) 33%, rgb(255, 121, 218) 100%);
+  -webkit-animation: spin3D 1.8s linear 0s infinite;
+          animation: spin3D 1.8s linear 0s infinite;
 }
-.loading .arc:nth-child(1) {
-  -webkit-animation: rotate1 1.15s linear infinite;
-          animation: rotate1 1.15s linear infinite;
+.loader .leo-core-1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 71, 79, 0.6666666667);
+  border-radius: 50%;
 }
-.loading .arc:nth-child(2) {
-  -webkit-animation: rotate2 1.15s linear infinite;
-          animation: rotate2 1.15s linear infinite;
+.loader .leo-border-2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(250, 250, 250, 0.1) 33%, rgb(153, 226, 208) 100%);
+  -webkit-animation: spin3D 2.2s linear 0s infinite;
+          animation: spin3D 2.2s linear 0s infinite;
 }
-.loading .arc:nth-child(3) {
-  -webkit-animation: rotate3 1.15s linear infinite;
-          animation: rotate3 1.15s linear infinite;
-}
-.loading .arc:nth-child(1) {
-  -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s;
-}
-.loading .arc:nth-child(2) {
-  -webkit-animation-delay: -0.4s;
-          animation-delay: -0.4s;
-}
-.loading .arc:nth-child(3) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-@-webkit-keyframes rotate1 {
-  from {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
-  }
-  to {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
-  }
+.loader .leo-core-2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 38, 48, 0.6666666667);
+  border-radius: 50%;
 }
 
-@keyframes rotate1 {
-  from {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
-  }
-  to {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
-  }
-}
-@-webkit-keyframes rotate2 {
-  from {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
-  }
-  to {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
-  }
-}
-@keyframes rotate2 {
-  from {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
-  }
-  to {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
-  }
-}
-@-webkit-keyframes rotate3 {
-  from {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
-  }
-  to {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
-  }
-}
-@keyframes rotate3 {
-  from {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
-  }
-  to {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
-  }
-}
 .footer {
   background-color: #353535;
   padding: 25px;
@@ -259,6 +320,11 @@ a {
   margin-bottom: 10px;
 }
 
+@media (min-width: 1224px) {
+  .footer {
+    margin: auto;
+  }
+}
 .accroche {
   padding: 2rem;
   text-align: center;
@@ -342,6 +408,65 @@ a {
   justify-content: space-between;
 }
 
+@media (min-width: 1224px) {
+  .accroche {
+    padding: 3rem;
+  }
+  .accroche__titre {
+    font-size: 2rem;
+  }
+  .accroche__text {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .fonctionnement {
+    background-color: #fff;
+    padding: 45px 20px;
+  }
+  .fonctionnement__titre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  .fonctionnement__etapes {
+    max-width: 30%;
+    margin: auto;
+  }
+  .restaurants {
+    padding: 40px 20px;
+    background-color: #f6f6f6;
+  }
+  .restaurants__titre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  .restaurants__card {
+    margin: 20px 50px 30px 50px;
+    width: 350px;
+  }
+  .restaurants__card--text {
+    padding: 10px 15px 20px 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .restaurants__card--text i {
+    margin-top: 3px;
+  }
+  .restaurants__card--text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .restaurants__card--text p {
+    font-size: 1.3rem;
+  }
+  .ensemble-restaurants {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 /* ============ LA PALETTE DU GOUT ============ */
 /* ============ Header et image top ============ */
 header i {
@@ -397,13 +522,6 @@ header i {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.plats__element1 {
-  background-color: white;
-  border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 2px 2px 10px #c4c3c0;
-}
 .plats p {
   font-size: 16px;
   margin-bottom: 10px;
@@ -412,23 +530,67 @@ header i {
   font-size: 16px;
   font-weight: 700;
 }
-.plats__element2 {
+.plats__elements {
+  height: 70px;
+  width: 100%;
+  padding-left: 10px;
   background-color: white;
-  border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 2px 2px 10px #c4c3c0;
-}
-.plats__element3 {
-  background-color: white;
-  border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 2px 2px 10px #c4c3c0;
-}
-.plats__prix {
   display: flex;
-  margin-top: -24px;
-  justify-content: flex-end;
-  padding-right: 15px;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.plats__elements__text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plats__elements__text--over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plats__elements__prix {
+  margin-left: 10px;
+}
+.plats__elements__validation {
+  height: 70px;
+  width: 80px;
+  opacity: 0;
+  background-color: #99E2D0;
+  margin-left: 25px;
+  margin-right: -70px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+.plats__elements:hover :nth-child(3) {
+  opacity: 1;
+  margin-right: 0px;
+}
+.plats__elements:hover .check_icons {
+  opacity: 1;
+}
+
+.btn-commander {
+  background-color: #f2f2f2;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 1224px) {
+  .restaurant__titre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .responsive {
+    display: flex;
+    justify-content: space-around;
+  }
+  .plats__elements {
+    width: 400px;
+  }
 }/*# sourceMappingURL=main.css.map */

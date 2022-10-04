@@ -88,4 +88,81 @@
         }
     }  
 }
-  
+
+
+
+@media (min-width : 1224px) {
+    .accroche {
+        padding: 3rem;
+
+        &__titre {
+            font-size: 2rem;
+        }
+       
+        &__text {
+            font-weight: 300;
+            font-size: 1.5rem;
+            margin: 2.5rem 0;
+        }
+    }
+
+    .fonctionnement {
+        background-color: #fff;
+        padding: 45px 20px;
+    
+        &__titre {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+    }
+    
+        &__etapes {
+            max-width: 30%;
+            margin: auto;
+            }
+    }
+
+    .restaurants {
+        padding: 40px 20px;
+        background-color: #f6f6f6;
+    
+        &__titre{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+    }
+        &__card{
+            margin: 20px 50px 30px 50px;
+            width: 350px;
+
+          &--text{
+            padding: 10px 15px 20px 15px;
+            display: flex;
+            justify-content: space-between;
+
+            & i {
+                margin-top: 3px;
+            }
+
+            & h3 {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+
+            & p {
+                font-size: 1.3rem;
+            }
+            }
+        }  
+    }
+
+    .ensemble-restaurants {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+
+    

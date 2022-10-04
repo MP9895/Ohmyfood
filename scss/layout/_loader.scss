@@ -1,67 +1,64 @@
-.loading {
-    position: relative;
-    width: 4rem;
-    height: 4rem;
-    transform-style: preserve-3d;
-    perspective: 800px;
-  
-    .arc {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border-bottom: 3px solid var(--primary-color);
-  
-      @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-          animation: rotate#{$i} 1.15s linear infinite;
-        }
-      }
-  
-      &:nth-child(1) {
-        animation-delay: -0.8s;
-      }
-  
-      &:nth-child(2) {
-        animation-delay: -0.4s;
-      }
-  
-      &:nth-child(3) {
-        animation-delay: 0s;
-      }
-    }
+.loader{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color-shadow;
+  position: fixed;
+  z-index: 1;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader 4s;
+  animation-fill-mode: both;
+
+  .spinner-box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  @keyframes rotate1 {
-    from {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
-    }
-  
-    to {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
-    }
+  .leo-border-1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(147,86,220,0.1) 33%, rgba(255,121,218,1) 100%);
+    animation: spin3D 1.8s linear 0s infinite;
   }
   
-  @keyframes rotate2 {
-    from {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
-    }
-  
-    to {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
-    }
+  .leo-core-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #37474faa;
+    border-radius: 50%;
   }
   
-  @keyframes rotate3 {
-    from {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
-    }
-  
-    to {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
-    }
+  .leo-border-2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(250, 250, 250, 0.1) 33%, rgba(153, 226, 208, 1) 100%);
+    animation: spin3D 2.2s linear 0s infinite;
   }
   
+  .leo-core-2 {
+    width: 100%;
+    height: 100%;
+    background-color: #1d2630aa;
+    border-radius: 50%;
+  }
+  
+}

@@ -55,10 +55,6 @@ header i {
     }
 }
 
-    &__element1 {
-        @include plat-restaurant;
-    }
-
     & p {
         font-size: 16px;
         margin-bottom: 10px;
@@ -69,19 +65,67 @@ header i {
         font-weight: 700;
     }
 
-    &__element2 {
+    &__elements {
         @include plat-restaurant;
+    
+        &__text{
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &--over{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &__prix{
+            margin-left: 10px;
+        }
+        &__validation {
+            height: 70px;
+            width: 80px;
+            opacity: 0;
+            background-color: $color-tertiary;
+            margin-left: 25px;
+            margin-right: -70px;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s ease-in-out;
+        }
+        &:hover :nth-child(3) {
+            opacity: 1;
+            margin-right: 0px;
+        }
+        &:hover .check_icons{
+            opacity: 1;
+        }
     }
+}
 
-    &__element3 {
-        @include plat-restaurant;
-    }
 
-    &__prix {
+.btn-commander {
+   background-color: #f2f2f2;
+   padding-bottom: 50px;
+}
+
+@media (min-width : 1224px) {
+    .restaurant__titre {
         display: flex;
-        margin-top: -24px;
-        justify-content: flex-end;
-        padding-right: 15px;
+        justify-content: center;
+        margin-bottom: 20px;
     }
+
+    .responsive {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .plats__elements {
+        width: 400px;
+    }
+
 }
 
