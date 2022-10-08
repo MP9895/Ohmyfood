@@ -30,7 +30,10 @@ header i {
 
 .restaurant__btn {
     border: none;
-    margin-left: 2rem;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 5px;
 }
 
 /* ============ Entrées - plats - desserts ============ */
@@ -55,9 +58,16 @@ header i {
     }
 }
 
+    & h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
     & p {
         font-size: 16px;
         margin-bottom: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     & span {
@@ -73,6 +83,7 @@ header i {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            padding-top: 10px;
             &--over{
                 white-space: nowrap;
                 overflow: hidden;
@@ -99,8 +110,9 @@ header i {
             opacity: 1;
             margin-right: 0px;
         }
-        &:hover .check_icons{
+        &:hover .icone_check{
             opacity: 1;
+            transform: rotate(-360deg);
         }
     }
 }
@@ -111,11 +123,18 @@ header i {
    padding-bottom: 50px;
 }
 
+
 @media (min-width : 1224px) {
+
     .restaurant__titre {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
+    }
+
+    .restaurant__btn {
+        margin-left: 2rem;
+        padding-right: 0;
     }
 
     .responsive {

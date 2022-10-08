@@ -5,8 +5,12 @@
     background-color: white;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 15px;
+    overflow: hidden;
+    animation: apparition 0.5s;
+    transform: scale(0);
+    animation-fill-mode: both;
 }
 
 @mixin gradient-color {

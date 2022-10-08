@@ -104,4 +104,28 @@
     font-size: 25px;
     opacity: 1;
     transition: all 1s ease-in-out;
+    transform: rotate(0deg);
+}
+
+// Animation d'apparition des elements "plats-restaurants"
+@keyframes apparition{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+// delai d'apparition des elements "plats-restaurants"
+.delai1{
+    animation-delay: 0.1s !important;
+}
+
+.delai2{
+    animation-delay: 0.5s !important;
+}
+
+.delai3{
+    animation-delay: 1s !important;
 }
