@@ -387,8 +387,9 @@ a {
   margin-bottom: 20px;
   margin-left: 10px;
 }
-.fonctionnement__etape:hover {
-  background-color: #f2eafb;
+.fonctionnement__etape--icon {
+  margin-right: 15px;
+  color: #c4c3c0;
 }
 .fonctionnement__etape span {
   font-weight: 700;
@@ -406,11 +407,11 @@ a {
   left: -22px;
   color: white;
 }
-.fonctionnement__icon {
-  font-size: 18px;
-  height: 19px;
-  margin-right: 15px;
-  color: rgba(0, 0, 0, 0.6);
+.fonctionnement__etape:hover {
+  background-color: #f2eafb;
+}
+.fonctionnement__etape:hover :nth-child(2) {
+  color: #9356DC;
 }
 
 .restaurants {
