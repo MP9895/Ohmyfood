@@ -13,15 +13,7 @@
     0%{
         background-color: rgba(0,0,0,1);
     }
-    25%{
-        background-color:rgba(0,0,0,1);
-    }
-    50%{
-        background-color:rgba(0,0,0,1);
-    }
-    80%{
-        background-color:rgba(0,0,0,1);
-    }
+
     100%{
         background-color:rgba(0,0,0,0.8);
         visibility: hidden;
@@ -88,7 +80,7 @@
     }
 }
 
-// Animation underline -> entrées, plats, desserts
+// Animation soulignement -> entrées, plats, desserts
 @keyframes progress{
     0%{
         transform: scaleX(0);
