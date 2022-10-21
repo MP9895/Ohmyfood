@@ -64,15 +64,6 @@ a {
   0% {
     background-color: rgb(0, 0, 0);
   }
-  25% {
-    background-color: rgb(0, 0, 0);
-  }
-  50% {
-    background-color: rgb(0, 0, 0);
-  }
-  80% {
-    background-color: rgb(0, 0, 0);
-  }
   100% {
     background-color: rgba(0, 0, 0, 0.8);
     visibility: hidden;
@@ -80,15 +71,6 @@ a {
 }
 @keyframes loader {
   0% {
-    background-color: rgb(0, 0, 0);
-  }
-  25% {
-    background-color: rgb(0, 0, 0);
-  }
-  50% {
-    background-color: rgb(0, 0, 0);
-  }
-  80% {
     background-color: rgb(0, 0, 0);
   }
   100% {
@@ -282,8 +264,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-animation: loader 4s;
-          animation: loader 4s;
+  -webkit-animation: loader 3s;
+          animation: loader 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -387,8 +369,9 @@ a {
   margin-bottom: 20px;
   margin-left: 10px;
 }
-.fonctionnement__etape:hover {
-  background-color: #f2eafb;
+.fonctionnement__etape--icon {
+  margin-right: 15px;
+  color: #c4c3c0;
 }
 .fonctionnement__etape span {
   font-weight: 700;
@@ -406,11 +389,11 @@ a {
   left: -22px;
   color: white;
 }
-.fonctionnement__icon {
-  font-size: 18px;
-  height: 19px;
-  margin-right: 15px;
-  color: rgba(0, 0, 0, 0.6);
+.fonctionnement__etape:hover {
+  background-color: #f2eafb;
+}
+.fonctionnement__etape:hover :nth-child(2) {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -477,7 +460,7 @@ a {
   }
   .restaurants__card {
     margin: 20px 50px 30px 50px;
-    width: 350px;
+    width: 550px;
   }
   .restaurants__card--text {
     padding: 10px 15px 20px 15px;
@@ -498,9 +481,9 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
-/* ============ LA PALETTE DU GOUT ============ */
 /* ============ Header et image top ============ */
 header i {
   position: absolute;
