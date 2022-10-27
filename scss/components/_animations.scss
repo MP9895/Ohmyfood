@@ -4,7 +4,7 @@
       transform: rotate3d(.5,.5,.5, 360deg);
     }
     to{
-      transform: rotate3d(0deg);
+      transform: rotate3d(1deg);
     }
   }
 
@@ -40,9 +40,7 @@
     transform: scale(1);
     &:hover{
         animation: fill 1s ease-out;
-        background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
-        background-clip: text;
-        -webkit-text-fill-color:transparent;
+        color: $color-primary;
         font-weight: bold;
         cursor: pointer;
         transform: scale(1.4);
