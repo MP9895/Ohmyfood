@@ -50,6 +50,7 @@ a {
   }
   to {
     transform: rotate3d(180deg);
+    color: black;
   }
 }
 @keyframes loader {
